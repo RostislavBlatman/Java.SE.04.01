@@ -26,8 +26,7 @@ public class Searcher {
              BufferedOutputStream bufferedOutputStream = new BufferedOutputStream(new FileOutputStream("src\\main\\java\\resources\\file.txt"))) {
             Map<String, Integer> counter = new HashMap<>();
             String line;
-            while ((bufferedReader.readLine()) != null) {
-                line = bufferedReader.readLine();
+            while ((line = bufferedReader.readLine()) != null) {
                 String[] words = line.split("([.[,\\s({)}\"]]+)");
 
                 for (String word : words) {
